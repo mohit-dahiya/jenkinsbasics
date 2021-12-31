@@ -10,7 +10,7 @@ pipeline {
          steps {
             echo "$ABOUT: This is build number $BUILD_NUMBER ."
             sh '''               
-               chmod +x test.sh
+               chmod +x testScript.sh
                ./testScript.sh
             '''
          }
