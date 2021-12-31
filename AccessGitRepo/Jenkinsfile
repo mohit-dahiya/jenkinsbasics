@@ -1,0 +1,15 @@
+pipeline {
+   agent any
+   
+   stages {
+      stage('stage-1') {
+         steps {
+            echo "This is build number $BUILD_NUMBER."
+            sh '''
+               echo "I am able to access git repo from Jenkins Pipeline"
+               echo "Using a multi-line shell step"
+            '''
+         }
+      }
+   }
+}
