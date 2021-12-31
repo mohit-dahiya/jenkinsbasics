@@ -1,5 +1,5 @@
-# jenkinsbasics
-Fundamentals of Jenkins
+# Fundamentals of Jenkins
+
 
 # Install Jenkins on Ubuntu 
 1. Create a Ubuntu Box (I am using Azure)
