@@ -1,0 +1,19 @@
+pipeline {
+   agent any
+   
+   environment {
+       ABOUT='Run Script'
+   }
+
+   stages {
+      stage('stage-1') {
+         steps {
+            echo "$DEMO: This is build number $BUILD_NUMBER ."
+            sh '''               
+               chmod +x test.sh
+               ./testScript.sh
+            '''
+         }
+      }
+   }
+}
