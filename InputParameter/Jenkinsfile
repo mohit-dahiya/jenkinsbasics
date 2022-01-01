@@ -28,7 +28,7 @@ pipeline {
             }
             steps {
                 script {
-                    if (${TARGET_ENVIRONMENT == 'SIT')
+                    if ("${TARGET_ENVIRONMENT" == "SIT")
                     {
                         echo 'Deploying build to SIT'
                     } else {
