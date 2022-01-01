@@ -27,7 +27,14 @@ pipeline {
                 }
             }
             steps {
-                echo "Deploying build ${RELEASE} to environment ${TARGET_ENVIRONMENT}"
+                script {
+                    if (${TARGET_ENVIRONMENT == 'SIT')
+                    {
+                        echo 'Deploying build to SIT'
+                    } else {
+                        echo 'Deploying build to Dev'
+                    }
+                }
             }
         }        
     }
