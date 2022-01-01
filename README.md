@@ -26,3 +26,19 @@ For POC Only: select Install suggestion plugin
 3. Change branch name from master to main
 4. Set Script Path: RunScript/Jenkinsfile
 5. Click on Save and trigger a build.
+
+# Ask for a user input
+1. Create a new Pipeline 
+2. Set Repository URL under Git block
+3. Change branch name from master to main
+4. Set Script Path: InputParameter/Jenkinsfile
+5. Click on Save and trigger a build.
+
+# Pass Secret in the script
+1. Create a new Secret: sam-name 
+2. Create a new Pipeline
+3. Set Repository URL under Git block
+4. Change branch name from master to main
+5. Set Script Path: Secret/Jenkinsfile
+6. Click on Save and trigger a build.
+
