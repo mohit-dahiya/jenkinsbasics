@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    environment {
+        RELEASE='16.11.1987'
+    }
+    stages {
+        stage('Build') {
+            agent any
+            environment {
+                AUTHOR='Mohit-Dahiya'
+            }
+            steps {
+                echo "Build Succeed. Release : ${RELEASE}, Author: ${AUTHOR}..."
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing build ${RELEASE}..."
+            }
+        }
+        stage('Deploy') {
+            input {
+                message 'Deploy?'
+                ok 'Do it!'
+                parameters {
+                    string(name: 'TARGET_ENVIRONMENT', defaultValue: 'SIT', description: 'SIT environment')
+                }
+            }
+            steps {
+                echo "Deploying build ${RELEASE} to environment ${TARGET_ENVIRONMENT}"
+            }
+        }        
+    }
+    post{
+        always {
+             echo 'Prints whether deploy happened or not, success or failure'
+        }
+    }
+}
