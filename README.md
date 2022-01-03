@@ -42,3 +42,4 @@ For POC Only: select Install suggestion plugin
 5. Set Script Path: Secret/Jenkinsfile
 6. Click on Save and trigger a build.
 
+Ref link: https://www.pluralsight.com/courses/using-declarative-jenkins-pipelines
